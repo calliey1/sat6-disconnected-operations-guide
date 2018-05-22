@@ -266,6 +266,13 @@ yum install rubygem-foreman_maintain -y
 yum update -y
 ~~~
 
+Update firewall to include RH-Satellite-6 serivce.
+
+~~~
+firewall-cmd --add-service RH-Satellite-6 --permanent 
+firewall-cmd --reload 
+~~~
+
 Next we'll install Satellite, setting our default organization to **RedHat**, default location to **RDU** and default admin password to **redhat** (adjust to your needs)
 ~~~
 satellite-installer --scenario satellite -v \
@@ -799,6 +806,14 @@ yum install satellite -y
 yum install rubygem-foreman_maintain -y
 yum update -y
 ~~~
+
+Update firewall to include RH-Satellite-6 serivce.
+
+~~~
+firewall-cmd --add-service RH-Satellite-6 --permanent 
+firewall-cmd --reload 
+~~~
+
 
 Next we'll install Satellite, setting our default organization to **RedHat**, default location to **RDU** and default admin password to **redhat** (adjust to your needs)
 ~~~
